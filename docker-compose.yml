@@ -1,0 +1,26 @@
+version: '2'
+services:
+  php:
+    build: .
+    ports:
+      - "9000:80"
+    container_name: 'phpweb'
+    environment:
+      - DEBUG=1
+    # volumes:
+    #   - ./:/var/www/
+  #   links:
+  #     - PostgreSQL
+
+  # PostgreSQL:
+  #   image: postgres:10.1
+  #   command: ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
+  #   ports:
+  #     - "5432:5432"
+  #   container_name: 's2db'
+  #   environment:
+  #     - DEBUG=true
+  #     - DB_USER=postgres
+  #     - DB_PASS=postgres
+  #   volumes:
+  #     - ./data/data:/var/lib/postgresql/data
