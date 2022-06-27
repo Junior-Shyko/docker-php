@@ -4,7 +4,7 @@ services:
     build: .
     ports:
       - "9000:80"
-    container_name: 'phpweb'
+    container_name: 'phpweb2'
     environment:
       - DEBUG=1
     volumes:

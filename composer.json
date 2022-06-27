@@ -3,6 +3,7 @@
         "nesbot/carbon": "^2.57.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "^5.4"
+        "symfony/var-dumper": "^5.4",
+        "altorouter/altorouter": "1.1.0"
     }
 }
