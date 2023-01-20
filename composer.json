@@ -1,6 +1,7 @@
 {
     "require": {
-        "nesbot/carbon": "^2.57.0"
+        "nesbot/carbon": "^2.57.0",
+        "fzaninotto/faker": "^1.9"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.4"
