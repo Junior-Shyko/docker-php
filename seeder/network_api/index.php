@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', true);
-$host = "172.27.163.28";
+$host = "172.19.100.214";
 $dbname = "network_api";
 $username = "junior";
 $password = "senha";
@@ -8,14 +8,14 @@ require dirname(dirname(__DIR__)).'/vendor/autoload.php';
 
 
 try {
-      $conn = new PDO("mysql:host=172.27.163.28;dbname=network_api", $username, $password);
+      $conn = new PDO("mysql:host=$host;port=3336;dbname=network_api", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "Deu certo"."\n";
     } catch (PDOException $pe) {
       die ("Could not connect to the database $dbname :" . $pe->getMessage());
     }
 
-    // for ($i=0; $i < 3; $i++) { 
+    // for ($i=0; $i < 20; $i++) { 
     //     $faker = Faker\Factory::create('pt_BR');
     //     $stmt = $conn->prepare('INSERT INTO up_users (username, email, provider, password, created_at, confirmed, blocked,  
     //      address, number, complement, district, city, state, phone, birthday, marital_status, 
@@ -47,7 +47,7 @@ try {
     // }
 
     //INSERINDO RELACIONAMENTO DE USUARIO COM PERFIL DE USUARIO
-    // for ($i=2; $i < 5; $i++) { 
+    // for ($i=2; $i < 23; $i++) { 
     //   $faker = Faker\Factory::create('pt_BR');      
     //   $stmt = $conn->prepare('INSERT INTO links_user_links (link_id, user_id) VALUES( :link_id, :user_id )');
     //   $stmt->execute(array(
@@ -59,7 +59,7 @@ try {
     // }
 
     //INSERINDO RELACIONAMENTO DE USUARIO COM A INSTITUIÇÃO
-    // for ($i=2; $i < 5; $i++) { 
+    // for ($i=2; $i < 23; $i++) { 
     //   $faker = Faker\Factory::create('pt_BR');      
     //   $stmt = $conn->prepare('INSERT INTO institutions_user_links (institution_id, user_id) VALUES( :institution_id, :user_id )');
     //   $stmt->execute(array(
