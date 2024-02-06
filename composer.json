@@ -1,6 +1,9 @@
 {
     "require": {
-        "nesbot/carbon": "^2.57.0"
+        "nesbot/carbon": "^2.57.0",
+        "fabpot/goutte": "^4.0",
+        "symfony/dom-crawler": "^5.4",
+        "symfony/http-client": "^5.4"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.4"
