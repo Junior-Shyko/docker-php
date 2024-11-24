@@ -7,18 +7,8 @@ $db = new Conn();
 $personRepo = new Crud($db);
 $persons = $personRepo->getAllUsers();
 
+require 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de pessoas</title>
-  <?php require 'assets.php' ?>
-</head>
-
-<body>
   <div class="container">
   <ul class="list-group mt-5">
     <?php foreach ($persons as $key => $person) { ?>
@@ -36,6 +26,5 @@ $persons = $personRepo->getAllUsers();
     <?php } ?>
     </ul>
   </div>
-</body>
+<?php require 'footer.php'; ?>
 
-</html>

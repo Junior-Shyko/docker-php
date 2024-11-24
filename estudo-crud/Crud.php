@@ -1,4 +1,5 @@
 <?php 
+require '../vendor/autoload.php'; 
 require 'Conn.php';
 
 class Crud
@@ -17,6 +18,10 @@ class Crud
         $stmt = $this->dbConn->query($query);
 
         return $stmt->fetchAll();
+    }
+
+    public function create($request) {
+        dump($request);
     }
 }
 
